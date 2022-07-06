@@ -1,0 +1,122 @@
+.contact{
+    padding: 50px 0;
+    a{
+        color: #000;
+        &:hover{
+            color: $bronze;
+        }
+    }
+
+    &__offer{
+        max-width: 400px;
+        margin: 50px auto;
+    }
+
+    &_mail,&_phone{
+        margin-bottom: 10px;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width:$bp3) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__left,&__right{
+        flex: 1 1 50%;
+        @media (max-width:$bp3) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__left{
+        text-align: center;
+        @media (min-width:$bp3) {
+            border-right: 1px solid;
+        }
+
+        @media (max-width:$bp3) {
+            margin-bottom: 50px;
+         }
+    }
+   
+    &__right{
+        background: $white ;
+        @media (min-width:$bp3) {
+            margin: 0 50px;
+        }
+
+        @media (max-width:$bp3) {
+           text-align: center;
+           max-width: 600px;
+           margin: 0 auto;
+        }
+        padding: 20px;
+        &__title{
+            @include fontz(37px,10);
+            font-weight: normal;
+            color: #000;
+        }
+
+        &__descr{
+            padding: 20px 0;
+        }
+
+        input[type=text],[type=email],textarea{
+            font-size: 20px;
+            border:none;
+            width: 100%;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+            font-family: 'Poppins', sans-serif;
+        }
+        input[type="submit"]{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        textarea{
+            height: 150px;
+        }
+
+        .wpcf7-form{
+            p{
+                margin: 20px 0;
+            }
+        }
+
+        .button{
+            background: $bronze;
+            padding: 10px 20px;
+            transition: 0.45s ease;
+            font-size: 18px;
+            border: none;
+        }
+    }
+
+    &__socials{
+        display: flex;
+        justify-content: center; 
+    }
+
+    &__socials_img{
+         padding: 50px 0;
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        
+        a{
+            display: flex;
+            margin: 0 10px;
+            padding: 15px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.cooperation{
+    padding: 75px 0;
+    background: $dark;
+    color: $white;
+
+    &__head{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        @media (max-width:$bp2) {
+            flex-wrap: wrap;
+        }
+
+        &_title{
+            @include fontz(28px,10);
+            max-width: 900px;
+            font-weight: 300;
+            font-family: 'IBM Plex Serif', serif;
+        }
+    }
+
+    &__button{
+        @media (max-width:$bp2) {
+            margin-top: 50px;
+        }
+    }
+
+    .arrow{
+        color: $white;
+
+        &::before{
+            background: url(../assets/strzalka2.svg) no-repeat left;
+        }
+        @media (min-width:$bp3) {
+            &:hover{
+                color: $bronze;
+                &::before{
+                    background: url(../assets/strzalka-br.svg) no-repeat left;
+                }
+            }
+        }
+    }
+
+    &__bootom{
+        margin-top: 100px;
+        @media (min-width:$bp2) {
+            padding: 0 10%;
+
+        }
+
+        &_title{
+            margin-bottom: 50px;
+        }
+
+        &_descr{
+            @include fontz(25px,10);
+            font-weight: 100;
+
+        }
+
+        &_education-wrap{
+            display: flex;
+            padding: 20px 0;
+            @media (max-width:$bp2) {
+               flex-wrap: wrap;
+    
+            }
+            @media (min-width:$bp2) {
+                &:nth-child(even){
+                    justify-content: end;
+                }
+            }
+            &:not(:last-child){
+                border-bottom:1px solid $white ;
+            }
+            
+        }
+
+        &_education-year{
+            @include fontz(100px,10);
+            @media (min-width:$bp1) {
+              margin-right: 50px;
+            }
+            font-family: "IBM Plex Serif",serif;
+        }
+
+        &_education-date{
+            @include fontz(20px,7);
+        }
+
+        &_education-descr{
+            @include fontz(16px,2);
+            max-width: 350px;
+            span{
+                color: $bronze;
+            }
+        }
+
+    }
+
+    
+}

@@ -1,0 +1,81 @@
+.about{
+    padding: 75px 0;
+    &__top,&__bottom{
+        display: flex;
+        align-items: center;
+        @media (max-width:$bp2) {
+            flex-wrap: wrap;
+        }
+       
+    }
+
+    &__wrap,&__contetn{
+        flex: 1 1 50%;
+        @media (max-width:$bp2) {
+            flex: 1 1 100%;
+        }
+    }
+
+   
+
+    &__contetn{
+        padding: 5% 0 5% 5%;
+        @media (max-width:$bp2) {
+            padding: 5% 0;
+        }
+        
+        &_title{
+            @include fontz(30px,8);
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        &_descr{
+            padding: 50px 0;
+            span{
+                @include fontz(18px,4);
+            }
+        }
+    }
+    
+    &__bottom{
+        margin-top: 50px;
+        @media (max-width:$bp2) {
+            flex-direction: column-reverse;
+        }
+        &_img,&_text{
+            flex: 1 1 50%; 
+            @media (max-width:$bp2) {
+                flex: 1 1 100%;
+            }
+        }
+
+        &_text{
+            text-align: center;
+            margin-right: 150px;
+            @media (max-width:$bp3) {
+                margin-right: 20px;
+            }
+            @media (max-width:$bp2) {
+                margin-right: 0px;
+            }
+        }
+
+        &_text-title{
+            @include fontz(25px,21);
+            font-weight: 300;
+            text-transform: uppercase;
+            font-family: 'IBM Plex Serif', serif;
+            margin-bottom: 50px;
+            span{
+                color: $bronze;
+            }
+        }
+
+        &_img{
+            @media (max-width:$bp2) {
+                margin-bottom: 50px ;
+            }
+        }
+    }
+}

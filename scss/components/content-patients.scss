@@ -1,0 +1,113 @@
+.patients{
+    background: $dark;
+    padding: 100px 0;
+    color: $white;
+    &__box-top,&__box-bottom,&__box-bottom_images{
+        display: flex;
+    }
+
+    &__box-top{
+        justify-content: space-between;
+        align-items: stretch;
+        margin-bottom: 50px;
+        @media (max-width:$bp2) {
+            flex-wrap: wrap;
+        }
+
+        &_title{
+            max-width: 800px;
+            @include fontz(35px,3);
+            font-weight: 100;
+            font-family: 'IBM Plex Serif', serif;
+        }
+
+        
+    }
+
+    .arrow{
+        color: $white;
+
+        &::before{
+            background: url(../assets/strzalka2.svg) no-repeat left;
+        }
+      
+        @media (min-width:$bp3) {
+            &:hover{
+                color: $bronze;
+                &::before{
+                    background: url(../assets/strzalka-br.svg) no-repeat left;
+                    
+                }
+            }
+        }
+    }
+
+    &__box-bottom{
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width:$bp2) {
+            flex-wrap: wrap;
+        }
+
+        &_images,&_descr{
+            flex: 1 1 50%;
+            @media (max-width:$bp2) {
+                flex: 1 1 100%;
+            }
+        }
+
+        &_images{
+            div{
+                transition: 0.45s;
+                &:nth-child(1){
+                    margin: 100px 10px 0 0; 
+                    @media (max-width:$bp1) {
+                        margin: 0 auto 50px; 
+                    }
+                }
+                &:nth-child(2){
+                    margin:0 0 100px 10px; 
+                    @media (max-width:$bp1) {
+                        display: none;
+                    }
+                }
+            }
+           
+        }
+
+        &_descr{
+            padding-left: 150px;
+            @media (max-width:$bp4) {
+                padding-left: 100px;
+            }
+            @media (max-width:$bp3) {
+                padding-left: 50px;
+            }
+            @media (max-width:$bp2) {
+                padding-left: 0;
+            }
+        }
+
+        &_title{
+            @include fontz(30px,8);
+            font-weight: 300;
+        }
+
+        &_descrption{
+            max-width: 500px;
+            margin-top: 100px;
+            span{
+                @include fontz(18px,2);
+                margin-bottom: 100px;
+            }
+            @media (max-width:$bp3) {
+                margin-top: 50px;
+                span{
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+
+   
+}

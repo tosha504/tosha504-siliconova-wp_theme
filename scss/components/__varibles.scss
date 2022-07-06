@@ -1,0 +1,24 @@
+$bronze: #bb9c65;
+$banner: #f2eee9;
+$width: 1400px;
+$white: #fff;
+$dark: #242425;
+$cream: #d4c6b1;
+
+//break-points
+$bp1: 576px + 1;
+$bp2: 768px + 1;
+$bp3: 992px + 1;
+$bp4: 1200px + 1;
+$bp5: 1400px + 1;
+
+$width: 1200px;
+
+@mixin fontz($fmx,$fmn){
+    font-size: calc(#{$fmx} + (#{$fmn} * (100vw / 1400)));
+}
+
+@mixin line($lmx,$lmn){
+    line-height: calc(#{$lmx} + (#{$lmn} * (100vw / 1400)));
+}
+

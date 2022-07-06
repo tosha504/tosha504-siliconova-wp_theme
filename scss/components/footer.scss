@@ -1,0 +1,184 @@
+.pre-footer{
+    padding: 100px 0;
+    background: $cream;
+    a{
+        color: #000;
+        &:hover{
+            color: $bronze;
+        }
+    }
+
+    &__offer{
+        max-width: 400px;
+        margin: 50px auto;
+    }
+
+    &_mail,&_phone{
+        margin-bottom: 10px;
+    }
+
+    &__container{
+        display: flex;
+        @media (max-width:$bp3) {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__left,&__right{
+        flex: 1 1 50%;
+        @media (max-width:$bp3) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__left{
+        text-align: center;
+        @media (max-width:$bp3) {
+            margin-top: 200px;
+        }
+       
+        @media (max-width:$bp1) {
+            margin-top: 500px;
+        }
+        @media (max-width:calc($bp1 - 170px)) {
+            margin-top:  550px;
+        }
+    }
+    &__right-wrap{
+        position: relative;
+        padding: 250px;
+        @media (max-width:$bp3) {
+            margin:0 auto;
+        }
+      
+        @media (max-width:$bp1) {
+            padding: 150px;
+        }
+        @media (max-width:calc($bp1 - 170px)) {
+            padding: 130px;
+        }
+    }
+    &__right{
+        background: $white ;
+        max-width: 100%;
+        padding: 40px 20px 20px;
+        position: absolute;
+        top: 0;
+        left: 50px;
+        @media (max-width:$bp3) {
+            left: 0;
+        }
+        @media (max-width:$bp3) {
+            max-width: 100%;
+        }
+        @media (max-width:$bp1) {
+            max-width: 300px;
+        }
+        .border{
+            background: $bronze;
+            padding: 12px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        
+
+        &__title{
+            @include fontz(37px,10);
+            font-weight: normal;
+            color: #000;
+        }
+
+        &__descr{
+            padding: 20px 0;
+        }
+
+        input[type=text],[type=email],textarea{
+            font-size: 20px;
+            border:none;
+            width: 100%;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        textarea{
+            height: 80px;
+        }
+
+        .wpcf7-form{
+            p{
+                margin: 20px 0;
+            }
+        }
+
+        .wpcf7-response-output{
+            @include fontz(13px,2)
+        }
+
+        .button{
+            background: $bronze;
+            padding: 10px 20px;
+            transition: 0.45s ease;
+            font-size: 18px;
+            border: none;
+        }
+    }
+
+}
+
+
+.footer {
+    background: #000;
+    color: #fff;
+
+    &__container{
+        display: flex;
+        align-items: center;
+        gap: 0 150px;
+        @media (max-width:$bp3) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        a{
+            color: $white;
+            &:hover{
+                color: $bronze;
+            }
+        }
+    }
+    &__dev{
+        @media (max-width:$bp1) {
+            padding:0 0 30px;
+        }
+    }
+
+    &__socials{
+        display: flex;
+        
+
+    }
+
+    &__socials_img{
+         padding: 65px 0;
+         @media (max-width:$bp3) {
+            padding: 30px 0;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        
+        a{
+            display: flex;
+            margin: 0 10px;
+            padding: 15px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

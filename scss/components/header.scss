@@ -1,0 +1,107 @@
+.header{
+    padding: 30px 0;
+    background: $banner;
+    &__box, &__menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    &__box{
+        @media (max-width:$bp3) {
+            justify-content: space-between;
+        }
+    }
+
+    &__menu{
+        a{
+            color: #000;
+            @include fontz(18px ,0);
+            text-transform: uppercase;
+        }
+
+        @media (max-width:$bp3) {
+            display: flex;
+            padding: 25% 0;
+            background: #bb9c65;
+            position: fixed;
+            right: -100%;
+            top: 0;
+            bottom: 0;
+            z-index: 20;
+            text-align: center;
+            flex-direction: column;
+            overflow: auto;
+            gap: 40px;
+            transition: all .5s ease 0s;
+            justify-content: flex-start;
+
+            &.active{
+                width: 80%;
+                right: 0;
+            }
+        }
+
+       
+
+        @media (min-width:$bp3) {
+            li{
+                &:not(:last-child){
+                    margin-right: 50px;
+                }
+
+                @media (min-width:$bp3) {
+                    &:hover{
+                        a{
+                            color: $bronze;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__burger{
+        display: none;
+    }
+
+    @media (max-width:$bp3) {
+        &__burger {
+            z-index: 21;
+            display: flex;
+            align-items: center;
+            margin-right: 80px;
+            position: relative;
+            height: 3px;
+            transition: 0.4s;
+            background: $bronze;
+            width: 40px;
+            margin: 0;
+    
+            &:after{
+                background: $bronze;
+                width: 40px;
+            }
+        
+          
+            &:after {
+                position: absolute;
+                bottom: 8px;
+                content: "";
+                height: 3px;
+            }
+        
+            &.active {
+                background: $white;
+                transform: rotate(-40deg);
+                
+                &::after {
+                background: $white;
+                transform: rotate(85deg);
+                bottom: 0px;
+                }
+            }
+        }
+
+    }
+}

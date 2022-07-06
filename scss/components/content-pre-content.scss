@@ -1,0 +1,43 @@
+.pre-content{
+    background: $banner;
+    padding: 50px 0;
+    
+    &__container {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        @media (max-width:$bp2) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__title{
+        @include fontz(25px,10);
+        max-width: 900px;
+        font-weight: 100;
+        font-family: 'IBM Plex Serif', serif;
+
+    }
+
+    &__button{
+        @media (max-width:$bp2) {
+            margin-top: 50px ;
+        }
+    }
+
+    .arrow{
+        color: #000;
+        white-space: nowrap;
+        &::before{
+            background: url(../assets/strzalka-black.svg) no-repeat left;
+        }
+        @media (min-width:$bp3) {
+            &:hover{
+                color: $bronze;
+                &::before{
+                    background: url(../assets/strzalka-br.svg) no-repeat left;
+                }
+            }
+        }
+    }
+}
